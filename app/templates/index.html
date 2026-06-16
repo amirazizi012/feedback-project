@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ثبت فیدبک</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: Tahoma, Arial, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <div class="max-w-lg mx-auto mt-20 bg-white p-8 rounded-lg shadow-md border border-gray-100">
+        <h1 class="text-2xl font-bold mb-6 text-center text-blue-600">ثبت فیدبک شما</h1>
+        
+        <div id="alert-box" class="hidden mb-4 p-3 rounded text-sm text-center font-bold"></div>
+
+        <form id="feedback-form" class="space-y-4">
+            <div>
+                <label for="title" class="block mb-1 text-sm font-semibold">عنوان فیدبک</label>
+                <input type="text" id="title" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="مثلاً مشکل در پنل" required>
+            </div>
+            <div>
+                <label for="message" class="block mb-1 text-sm font-semibold">متن پیام</label>
+                <textarea id="message" rows="5" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="توضیحات خود را کامل بنویسید..." required></textarea>
+            </div>
+            <button type="submit" id="submit-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-colors">
+                ثبت و ارسال
+            </button>
+        </form>
+        <div class="mt-6 text-center">
+            <a href="/dashboard" class="text-sm text-gray-500 hover:text-gray-900 underline">ورود به پنل مدیریت</a>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('feedback-form');
+        const alertBox = document.getElementById('alert-box');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'در حال ارسال...';
+            
+            const title = document.getElementById('title').value;
+            const message = document.getElementById('message').value;
+
+            try {
+                const response = await fetch('/api/feedbacks', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ title, message })
+                });
+
+                if (response.ok) {
+                    showAlert('فیدبک شما با موفقیت ثبت شد.', 'bg-green-100 text-green-700');
+                    form.reset();
+                } else {
+                    showAlert('خطا در ثبت اطلاعات.', 'bg-red-100 text-red-700');
+                }
+            } catch (err) {
+                showAlert('مشکل در اتصال به سرور.', 'bg-red-100 text-red-700');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'ثبت و ارسال';
+            }
+        });
+
+        function showAlert(msg, classes) {
+            alertBox.className = `mb-4 p-3 rounded text-sm text-center font-bold ${classes}`;
+            alertBox.innerText = msg;
+            alertBox.style.display = 'block';
+            setTimeout(() => { alertBox.style.display = 'none'; }, 4000);
+        }
+    </script>
+</body>
+</html>
