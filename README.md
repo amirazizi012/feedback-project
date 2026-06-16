@@ -94,7 +94,7 @@ docker run -p 8000:8000 feedback-app
 - **رمز عبور:** `password123`
 
 ---
-
+<div dir="ltr">
 در پیاده‌سازی این پروژه از رویکردهای زیر استفاده شده است:
 
 1.  **FastAPI:** انتخاب شد به دلیل سرعت بسیار بالا (Asynchronous) و تولید خودکار مستندات API (Swagger) که سرعت توسعه را دوچندان می‌کند.
@@ -102,7 +102,7 @@ docker run -p 8000:8000 feedback-app
 3.  **SQLAlchemy (ORM):** استفاده از ORM باعث می‌شود برنامه به یک دیتابیس خاص (مثل SQLite) وابسته نباشد و به راحتی بتوان آن را به PostgreSQL یا MySQL متصل کرد.
 4.  **Bcrypt & JWT:** برای امنیت از هش‌کردن پسوردها با کتابخانه `bcrypt` و برای مدیریت نشست‌های کاربر از توکن‌های استاندارد `JWT` استفاده شده است.
 5.  **Tailwind CSS:** برای فرانت‌اند از یک رویکرد مدرن استفاده شده تا بدون نیاز به فریم‌ورک‌های سنگین جاوااسکریپت، ظاهر برنامه کاملاً زیبا و ری‌اسپانسیو باشد.
-
+</div>
 ## اسکرین‌شات‌ها
 <img width="982" height="567" alt="Screenshot 2026-06-16 233153" src="https://github.com/user-attachments/assets/731aa6d8-adb3-4d6f-a590-9dde0ae6af9e" />
 <img width="535" height="428" alt="Screenshot 2026-06-16 233128" src="https://github.com/user-attachments/assets/fcefd980-328a-4f47-8ef8-296f6178baa1" />
