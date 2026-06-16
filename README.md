@@ -1,11 +1,6 @@
-<img width="982" height="567" alt="Screenshot 2026-06-16 233153" src="https://github.com/user-attachments/assets/731aa6d8-adb3-4d6f-a590-9dde0ae6af9e" />
-<img width="535" height="428" alt="Screenshot 2026-06-16 233128" src="https://github.com/user-attachments/assets/fcefd980-328a-4f47-8ef8-296f6178baa1" />
-<img width="791" height="544" alt="Screenshot 2026-06-16 233117" src="https://github.com/user-attachments/assets/9da46f82-efc0-4582-b754-5842973bbbed" />
-<div dir="rtl">
+
 
 # پروژه سیستم رسیدگی به بازخورد (Feedback Board)
-
-این مخزن کد مربوط به تسک مصاحبه برای پیاده‌سازی یک مینی‌پروژه کامل در زمینه پردازش بازخورد می‌باشد که کاملاً بر اساس نیازمندی‌های اعلام‌شده در صورت‌مسئله توسعه یافته است. در این پروژه معماری استاندارد یک اپلیکیشن مبتنی بر `Python / FastAPI` با جداسازی لایه‌های منطقی پیاده شده است.
 
 ## راهنمای اجرای لوکال (Local Setup) روی سیستم شما
 
