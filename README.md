@@ -1,3 +1,6 @@
+<img width="982" height="567" alt="Screenshot 2026-06-16 233153" src="https://github.com/user-attachments/assets/731aa6d8-adb3-4d6f-a590-9dde0ae6af9e" />
+<img width="535" height="428" alt="Screenshot 2026-06-16 233128" src="https://github.com/user-attachments/assets/fcefd980-328a-4f47-8ef8-296f6178baa1" />
+<img width="791" height="544" alt="Screenshot 2026-06-16 233117" src="https://github.com/user-attachments/assets/9da46f82-efc0-4582-b754-5842973bbbed" />
 <div dir="rtl">
 
 # پروژه سیستم رسیدگی به بازخورد (Feedback Board)
@@ -76,8 +79,11 @@ uvicorn app.main:app --reload
 ۳. **پرهیز از Over-engineering در فرانت‌اند:** در نیازمندی‌ها ذکر شده بود استفاده از HTML/CSS کفایت می‌کند و نیازی به JS سنگین نیست. من صفحات را به طور کامل درون پوشه `templates` به صورت استاتیک و با استفاده از فریم‌ورک کلاس‌بندی `Tailwind CSS` کاملاً ری‌اسپانسیو (Responsive) درآوردم که هم ظاهری تمیز دارد و هم بار اضافه‌تری را به سیستم وارد نمی‌کند. احراز هویتِ سمت ظاهر سیستم با استفاده از جاوااسکریپت پایه (`Vanilla JS`) پیاده‌سازی شده که به راحتی برای نشان‌دادن داشبورد از توکن صادر شدهٔ `JWT` استفاده می‌کند.
 
 ## اسکرین‌شات‌ها
-
-> اینجا می‌توانید اسکرین‌شات‌های محلی خودتان را از داشبورد و صفحه لاگین که آپلود می‌کنید در گیت‌هاب قرار دهید.
+<img width="982" height="567" alt="Screenshot 2026-06-16 233153" src="https://github.com/user-attachments/assets/731aa6d8-adb3-4d6f-a590-9dde0ae6af9e" />
+<img width="535" height="428" alt="Screenshot 2026-06-16 233128" src="https://github.com/user-attachments/assets/fcefd980-328a-4f47-8ef8-296f6178baa1" />
+<img width="791" height="544" alt="Screenshot 2026-06-16 233117" src="https://github.com/user-attachments/assets/9da46f82-efc0-4582-b754-5842973bbbed" />
+<div dir="rtl">
+.
 
 - نمای صفحه ثبت فیدبک در فرم اصلی. 
 - نمای لاگین پنل مدیریت و جلوگیری از دسترسی ناشناس.
