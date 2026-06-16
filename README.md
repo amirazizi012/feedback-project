@@ -11,7 +11,7 @@
 <div dir="ltr">
 
 ```bash
-git clone https://github.com/your-username/feedback-board.git
+git clone https://github.com/amirazizi012/feedback-project.git
 cd feedback-board
 ```
 
