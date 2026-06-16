@@ -78,6 +78,16 @@ uvicorn app.main:app --reload
 دستور زیر را در ترمینال اجرا کنید:
 ```bash
 chmod +x run.sh && ./run.sh
+```
+
+**اجرا با داکر (Docker):**
+```bash
+docker build -t feedback-app .
+docker run -p 8000:8000 feedback-app
+```
+
+---
+
 ### اطلاعات ادمین برای لاگین در داشبورد
 یک کاربر اولیه ادمین زمان اولین راه‌اندازی، خودکار برای شما ساخته می‌شود:
 - **نام کاربری:** `admin`
