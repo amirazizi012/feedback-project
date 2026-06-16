@@ -1,4 +1,4 @@
-
+<div dir="rtl" align="right" style="text-align: right;">
 
 # پروژه سیستم رسیدگی به بازخورد (Feedback Board)
 
